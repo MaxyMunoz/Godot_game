@@ -1,19 +1,29 @@
-[gd_scene load_steps=53 format=3 uid="uid://gs0awhr6wpyv"]
+[gd_scene load_steps=63 format=3 uid="uid://gs0awhr6wpyv"]
 
 [ext_resource type="Texture2D" uid="uid://bag3c0mb7j0xb" path="res://Sprite/Walk (1).png" id="1_f5d3m"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_xc14p"]
 [ext_resource type="Script" path="res://Ecenas/Camera2D.gd" id="2_3nckn"]
 [ext_resource type="Texture2D" uid="uid://bjkf43id3xav8" path="res://Sprite/Walk (2).png" id="2_crg16"]
+[ext_resource type="Texture2D" uid="uid://dprq340o7jfjl" path="res://Sprite/Attack (1).png" id="3_kq2v0"]
 [ext_resource type="Texture2D" uid="uid://b4os43ynx6kb8" path="res://Sprite/Walk (3).png" id="3_y1voc"]
 [ext_resource type="Texture2D" uid="uid://dp140lkmqrfgv" path="res://Sprite/Walk (4).png" id="4_mhs4w"]
+[ext_resource type="Texture2D" uid="uid://bufx3nlcrgyww" path="res://Sprite/Attack (2).png" id="4_vtkxf"]
+[ext_resource type="Texture2D" uid="uid://wa3fjtlmsf73" path="res://Sprite/Attack (3).png" id="5_0ux2y"]
 [ext_resource type="Texture2D" uid="uid://oeg6nl2kya2b" path="res://Sprite/Walk (5).png" id="5_ctuu0"]
 [ext_resource type="Texture2D" uid="uid://3w61nj75v2qn" path="res://Sprite/Walk (6).png" id="6_0jk65"]
+[ext_resource type="Texture2D" uid="uid://cank0iyrhsi67" path="res://Sprite/Attack (10).png" id="6_so2kh"]
+[ext_resource type="Texture2D" uid="uid://busl7o6ik8e5w" path="res://Sprite/Attack (9).png" id="7_bow78"]
 [ext_resource type="Texture2D" uid="uid://baawho2pyobiy" path="res://Sprite/Walk (7).png" id="7_c3ywv"]
+[ext_resource type="Texture2D" uid="uid://ds7wuit0b87q4" path="res://Sprite/Attack (4).png" id="8_1pl63"]
 [ext_resource type="Texture2D" uid="uid://bh1wf75y3gvl2" path="res://Sprite/Walk (8).png" id="8_elc21"]
+[ext_resource type="Texture2D" uid="uid://bi0x25hw7jqyk" path="res://Sprite/Attack (5).png" id="9_mco3r"]
 [ext_resource type="Texture2D" uid="uid://dg86n5dhf3uhs" path="res://Sprite/Walk (9).png" id="9_pcr18"]
+[ext_resource type="Texture2D" uid="uid://c8a6vpsiyj68q" path="res://Sprite/Attack (6).png" id="10_6lly2"]
 [ext_resource type="Texture2D" uid="uid://b1eoyuf2bjq13" path="res://Sprite/Walk (10).png" id="10_aoc7o"]
+[ext_resource type="Texture2D" uid="uid://dte6vpr5rng05" path="res://Sprite/Attack (7).png" id="11_1mjkg"]
 [ext_resource type="Texture2D" uid="uid://cidd1dfbku1eq" path="res://Sprite/Run (1).png" id="11_2qi12"]
 [ext_resource type="Texture2D" uid="uid://e14kbopmexv5" path="res://Sprite/Run (2).png" id="12_eltvg"]
+[ext_resource type="Texture2D" uid="uid://cgfmb6qic864g" path="res://Sprite/Attack (8).png" id="12_rid8k"]
 [ext_resource type="Texture2D" uid="uid://b4127khqhb1gs" path="res://Sprite/Run (3).png" id="13_ovb41"]
 [ext_resource type="Texture2D" uid="uid://b8m4dj7h7i7c3" path="res://Sprite/Run (4).png" id="14_crsb8"]
 [ext_resource type="Texture2D" uid="uid://cey0we1eckhpi" path="res://Sprite/Run (5).png" id="15_sbqye"]
@@ -52,10 +62,45 @@
 [ext_resource type="Texture2D" uid="uid://d1mfv23nwv4c1" path="res://Sprite/Jump (9).png" id="48_q4xda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmtb2"]
-size = Vector2(58, 87.75)
+size = Vector2(59, 95)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jcy5"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kq2v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vtkxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0ux2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_so2kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bow78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1pl63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mco3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6lly2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1mjkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rid8k")
+}],
+"loop": false,
+"name": &"atacar",
+"speed": 9.0
+}, {
 "frames": [{
 "duration": 1.1,
 "texture": ExtResource("1_f5d3m")
@@ -235,7 +280,7 @@ script = ExtResource("1_xc14p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(42, 585)
+position = Vector2(50.5, 584.5)
 shape = SubResource("RectangleShape2D_lmtb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -246,4 +291,4 @@ script = ExtResource("2_3nckn")
 position = Vector2(50, 575)
 scale = Vector2(0.172487, 0.188119)
 sprite_frames = SubResource("SpriteFrames_6jcy5")
-animation = &"detenido"
+animation = &"atacar"
