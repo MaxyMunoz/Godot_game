@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://cwy5xtm64n5ap" path="res://Sprite/enemigo/male/Dead (12).png" id="46_6rx60"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nr0j"]
-size = Vector2(74, 102)
+size = Vector2(67, 101)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_31p7p"]
 animations = [{
@@ -212,7 +212,7 @@ animations = [{
 script = ExtResource("1_hsciy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1099, 575)
+position = Vector2(1095.5, 575.5)
 shape = SubResource("RectangleShape2D_4nr0j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -226,9 +226,9 @@ flip_h = true
 [node name="detectores" type="Node2D" parent="."]
 
 [node name="derecha" type="RayCast2D" parent="detectores"]
-position = Vector2(1122, 563)
+position = Vector2(1130, 567)
 target_position = Vector2(300, 0)
 
 [node name="izquierda" type="RayCast2D" parent="detectores"]
-position = Vector2(1068, 566)
+position = Vector2(1061, 567)
 target_position = Vector2(-300, 0)

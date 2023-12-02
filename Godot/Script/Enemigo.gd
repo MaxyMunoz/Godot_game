@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var velocidad: int = 50
+var vel_perseguir: int = 100
 var perseguir: bool = false
 
 func _ready():
@@ -21,12 +22,14 @@ func _physics_process(delta):
 	move_and_slide()
 
 func detectar():
-	if $derecha.is_colliding():
-		var obj = $derecha.get_collider()
+	if $detectores/derecha.is_colliding():
+		var obj = $detectores/derecha.get_collider()
 		if obj.is_in_group("player"):
-			print(obj.name)
+				print("hola"+obj.name)
 			
-	if $izquierda.is_colliding():
-		var obj =  $izquierda.get_collider()
+	if $detectores/izquierda.is_colliding():
+		var obj =  $detectores/izquierda.get_collider()
+		var grupo = obj.get_groups()
+		print(grupo[0])
 		if obj.is_in_group("player"):
 			print(obj.name)
