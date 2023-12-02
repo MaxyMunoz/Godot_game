@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://sl21xx0hhq7s"]
+[gd_scene load_steps=11 format=3 uid="uid://sl21xx0hhq7s"]
 
 [ext_resource type="Texture2D" uid="uid://c5jur3rmurhx7" path="res://terrenos/Terrain (16x16).png" id="2_1rmfc"]
 [ext_resource type="PackedScene" uid="uid://gs0awhr6wpyv" path="res://Ecenas/player.tscn" id="2_nypf8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dy8huy6aapjj0" path="res://Parallax/parallax-02.png" id="5_myxgq"]
 [ext_resource type="Texture2D" uid="uid://c2cycgljmo8af" path="res://Parallax/parallax-03.png" id="6_s2vos"]
 [ext_resource type="Texture2D" uid="uid://dai2587gaprk8" path="res://Parallax/parallax-04.png" id="7_vgfjv"]
+[ext_resource type="PackedScene" uid="uid://w0btl0ot5e7o" path="res://Ecenas/Enemigo.tscn" id="8_wotmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1k7ln"]
 texture = ExtResource("2_1rmfc")
@@ -569,3 +570,5 @@ motion_mirroring = Vector2(1153.44, 0)
 position = Vector2(576.5, 325.5)
 scale = Vector2(0.802083, 1.26758)
 texture = ExtResource("7_vgfjv")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_wotmr")]

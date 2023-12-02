@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-var velocidad : int = 30
-var salto : int = 200
+var velocidad : int = 50
+var salto : int = 300
 var gravedad : int = 300
 var accion : String
 var atacar : bool = false
