@@ -62,7 +62,7 @@
 [ext_resource type="Texture2D" uid="uid://d1mfv23nwv4c1" path="res://Sprite/Player/Jump (9).png" id="48_q4xda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmtb2"]
-size = Vector2(59, 95)
+size = Vector2(57, 95)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jcy5"]
 animations = [{
@@ -274,13 +274,13 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 script = ExtResource("1_xc14p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 y_sort_enabled = true
-position = Vector2(50.5, 584.5)
+position = Vector2(42.5, 581.5)
 shape = SubResource("RectangleShape2D_lmtb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]

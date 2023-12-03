@@ -23,13 +23,13 @@ func _physics_process(delta):
 
 func detectar():
 	if $detectores/derecha.is_colliding():
-		var obj = $detectores/derecha.get_collider()
+		var obj =$detectores/derecha.get_collider()
 		if obj.is_in_group("player"):
-				print("hola"+obj.name)
-			
+				$AnimatedSprite2D.flip_h=false
+				velocity.x = vel_perseguir
+				
 	if $detectores/izquierda.is_colliding():
-		var obj =  $detectores/izquierda.get_collider()
-		var grupo = obj.get_groups()
-		print(grupo[0])
+		var obj =$detectores/izquierda.get_collider()
 		if obj.is_in_group("player"):
-			print(obj.name)
+			$AnimatedSprite2D.flip_h = true
+			velocity.x = -vel_perseguir

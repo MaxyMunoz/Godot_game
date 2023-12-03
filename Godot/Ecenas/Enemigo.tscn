@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://cwy5xtm64n5ap" path="res://Sprite/enemigo/male/Dead (12).png" id="46_6rx60"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nr0j"]
-size = Vector2(67, 101)
+size = Vector2(66, 97)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_31p7p"]
 animations = [{
@@ -212,7 +212,7 @@ animations = [{
 script = ExtResource("1_hsciy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1095.5, 575.5)
+position = Vector2(1096, 573.5)
 shape = SubResource("RectangleShape2D_4nr0j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
